@@ -1,11 +1,19 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Trabalho com formulário</title>
-    </head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="Style.css">
+      <title>Trabalho com formulário</title>
+    
+      </head>
 
     <body>
         <form action="#" method="post">
-            <p>Olá, Digite suas Informações</p>
+            <h2>Agendamento de visita</h2>
             <br>
             <label for="nome">Nome:</label>
             <input 
@@ -13,6 +21,7 @@
             name="nome" 
             id="nome" 
             placeholder="Informe aqui o seu nome"
+            size="50"
             
          />
         
@@ -25,7 +34,7 @@
            name="email" 
            id="email" 
            placeholder="Informe aqui o seu email"
-           size ="30"
+           size ="40"
         />
 
         <br>
@@ -70,13 +79,59 @@
         <input
            type="number" 
            name="tempo" 
-           id="tempo" 
+           id="tempo"
+           min="1"
+           max="10"
+           step="2"
+           size="2" 
         />
 
         <br>
         <br>
 
-        <label for="observação">Observação:</label>
+        <label for="atracao">Atração:</label>
+        <select
+           id="atracao" 
+           name="atracao">
+         <option value="praia_do_Francês">Praia do Francês</option>
+         <option value="praia_do_Guga">Praia do Guga</option>
+         <option value="praia_do_Pontal"selected>Praia do Pontal</option>
+         <option value="praia_da_Barra">Praia da Barra</option>
+         <option value="praia_da_Sereia">Praia da Sereia</option>
+       </select>
+        <br><br>
+        
+        <fieldset>
+         <legend>Escolha o seu transporte</legend>
+        <input
+            type="radio"
+            name="trasnporte"
+            id="Carro"
+            value="carro"
+         >
+         <label for="Carro">Carro</label>
+
+         <input
+            type="radio"
+            name="trasnporte"
+            id="onibus"
+            value="onibus"
+         >
+         <label for="onibus">Ônibus</label>
+
+         <input
+            type="radio"
+            name="trasnporte"
+            id="Van"
+            value="Van"
+         >
+         <label for="Van">Van</label>
+         
+         </fieldset>
+         <br><br>
+
+        
+        <label for="observação"></label>
         <textarea           
            name="observação" 
            id="observação"
@@ -84,6 +139,12 @@
            rows="10"
            placeholder="Observação" 
         ></textarea>
+
+        <br><br>
+
+        <input type="checkbox" name="termos" id="termos">
+        <label for="Termos">Aceite os termos de uso</label>
+
 
     </form>
 </body>
